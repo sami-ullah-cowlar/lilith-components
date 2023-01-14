@@ -1,7 +1,9 @@
 {
   "name": "lilith-components",
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/lilith-components.umd.js",
   "module": "./dist/lilith-components.js",
   "exports": {
@@ -11,7 +13,7 @@
     }
   },
   "types": "./dist/main.d.ts",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "This template should help get you started developing with Vue 3 in Vite.",
   "repository": {
     "type": "git",
