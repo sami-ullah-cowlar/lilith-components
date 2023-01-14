@@ -1,12 +1,18 @@
 <script setup lang="ts">
-defineProps<{
-  msg: string
-}>()
+defineProps({
+  lilithMessage: {
+    type: String,
+    required: true,
+    // default?: D | DefaultFactory<D> | null | undefined | object;
+    // validator?(value: unknown): boolean;
+  }
+})
 </script>
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <h1 class="green">{{ lilithMessage }}</h1>
+    <h2>Hello World!</h2>
     <h3>
       You’ve successfully created a project with
       <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
