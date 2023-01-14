@@ -50,3 +50,8 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+
+
+## Guide followed 
+- [Creation of the project](https://vuejs.org/guide/quick-start.html#creating-a-vue-application)
+- [Registering the repository as Npm Package](https://docs.npmjs.com/creating-and-publishing-unscoped-public-packages)
