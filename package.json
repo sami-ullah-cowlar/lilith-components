@@ -23,7 +23,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "npm:publish": "npm publish",
     "npm:publish:utility": "git push && npm publish",
-    "npm:publish:patch": "npm version patch && npm:publish:utility",
+    "npm:publish:patch": "npm version patch && npm run npm:publish:utility",
     "npm:publish:minor": "npm version minor",
     "npm:publish:major": "npm version major"
   },
