@@ -5,10 +5,10 @@
     "dist"
   ],
   "main": "./dist/lilith-components.umd.js",
-  "module": "./dist/lilith-components.js",
+  "module": "./dist/lilith-components.es.js",
   "exports": {
     ".": {
-      "import": "./dist/lilith-components.js",
+      "import": "./dist/lilith-components.es.js",
       "require": "./dist/lilith-components.umd.js"
     }
   },
