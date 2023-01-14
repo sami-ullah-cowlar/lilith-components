@@ -22,7 +22,8 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "npm:publish": "npm publish",
-    "npm:publish:patch": "npm version patch",
+    "npm:publish:utility": "git push && npm publish",
+    "npm:publish:patch": "npm version patch && npm:publish:utility",
     "npm:publish:minor": "npm version minor",
     "npm:publish:major": "npm version major"
   },
