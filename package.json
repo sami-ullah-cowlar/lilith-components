@@ -24,8 +24,8 @@
     "npm:publish": "npm publish",
     "npm:publish:utility": "git push && npm publish",
     "npm:publish:patch": "npm version patch && npm run npm:publish:utility",
-    "npm:publish:minor": "npm version minor",
-    "npm:publish:major": "npm version major"
+    "npm:publish:minor": "npm version minor && npm run npm:publish:utility",
+    "npm:publish:major": "npm version major && npm run npm:publish:utility"
   },
   "dependencies": {
     "vue": "^3.2.45"
