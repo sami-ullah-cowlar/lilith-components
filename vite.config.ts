@@ -17,7 +17,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, "src/main.ts"),
       name: "LilithComponents",
-      fileName: format => `iotcore-vue-components.${format}.js`
+      fileName: format => `lilith-components.${format}.js`
     },
     rollupOptions: {
       external: ['vue'],
