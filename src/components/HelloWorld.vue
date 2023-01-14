@@ -1,12 +1,12 @@
 <script setup lang="ts">
-defineProps<{
+defineProps({
   lilithMessage: {
-    type: string,
-    required: true;
+    type: String,
+    required: true,
     // default?: D | DefaultFactory<D> | null | undefined | object;
     // validator?(value: unknown): boolean;
   }
-}>()
+})
 </script>
 
 <template>
