@@ -1,5 +1,5 @@
 import { App } from 'vue'
-import * as components from '@/stories/index'
+import * as components from './stories/index'
 
 function install (app: App) {
     for (const key in components) {
@@ -8,8 +8,8 @@ function install (app: App) {
     }
 }
 
-import "@/assets/styles.scss";
+import "./assets/styles.scss";
 
 export default { install }
 
-export * from '@/stories/index'
+export * from './stories/index'
