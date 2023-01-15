@@ -1,6 +1,15 @@
-import "@/assets/main.css";
+import { App } from 'vue'
+import * as components from './components'
 
-export { default as HelloWorld } from "@/components/HelloWorld.vue";
-export { default as TheWelcome } from "@/components/TheWelcome.vue";
-export { default as WelcomeItem } from "@/components/WelcomeItem.vue";
-export { default as Greeter } from "@/components/Greeter.vue";
+function install (app: App) {
+    for (const key in components) {
+        // @ts-expect-error
+        app.component(key, components[key])
+    }
+}
+
+import "./assets/main.css";
+
+export default { install }
+
+export * from './components'
