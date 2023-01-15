@@ -1,12 +1,9 @@
 <script setup lang="ts">
-defineProps({
-  lilithMessage: {
-    type: String,
-    required: true,
-    // default?: D | DefaultFactory<D> | null | undefined | object;
-    // validator?(value: unknown): boolean;
-  }
-})
+export interface Props {
+  lilithMessage: string;
+}
+
+defineProps<Props>()
 </script>
 
 <template>
