@@ -1,58 +1,78 @@
-# lilith-components
+# Cowlar Vue Components Library
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+The Cowlar Vue Components library includes components that can be used by cowlar projects as a package.
 
 ## Project Setup
 
-```sh
+- clone the repository
+
+```
+git clone  https://gitlab.com/cowlar/iotcore-gen2/iotcore-vue-components.git
+```
+
+- Install dependencies
+
+```
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+- Run the Project
 
-```sh
+```
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+## How to create and publish your component?
 
-```sh
+Follow the steps below to create and publish your component in Cowlar Vue Components Library.
+
+1.  Create a component/layout/pages with in the stories directory
+2.  Import and export the component from index.ts file located in the root of src directory.
+
+```
+export { default as Button } from "./stories/Button.vue";
+```
+
+3.  Change the version of application in package.json file. If the version was 1.0.1 previosly, then we will make it 1.0.2
+
+```
+"version": "1.0.2"
+```
+
+4.  Create a build by running the following command in terminal
+
+```
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+6.  Last step is to publish the package, run the following commands
 
-```sh
-npm run test:unit
+```
+npm login
+export CI_JOB_TOKEN=your_gitlab_personal_access_token_here
+npm publish
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## How to test your component in another project without publishing it?
 
-```sh
-npm run lint
+1. Run the following command in your components library project
+
+```
+npm link
 ```
 
+2. Now in the project where you want to test your component, run the following command
 
-## Guide followed 
-- [Creation of the project](https://vuejs.org/guide/quick-start.html#creating-a-vue-application)
-- [Registering the repository as Npm Package](https://docs.npmjs.com/creating-and-publishing-unscoped-public-packages)
-- [Configuring Library Mode rather than a base vue app](https://docs.npmjs.com/creating-and-publishing-unscoped-public-packages)
+```
+npm link packageName
+```
+
+You can found packageName in the package.json of your components library project. In our case it is _iotcore-vue-components_
+
+## Todo
+
+- [ ] Git commit message hook (to avoid irrelavant commit messages)
+- [ ] Update the Architecture of application (most probably will be using atomic design pattern)
+- [ ] Tailwind Integration (required T&D if we really need this)
+- [ ] Components testing
+- [ ] Code Guidelines documentation (create a checklist that must be follow when creating compnent)
