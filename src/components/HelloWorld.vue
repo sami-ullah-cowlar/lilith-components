@@ -5,8 +5,8 @@ defineProps({
     required: true,
     // default?: D | DefaultFactory<D> | null | undefined | object;
     // validator?(value: unknown): boolean;
-  }
-})
+  },
+});
 </script>
 
 <template>

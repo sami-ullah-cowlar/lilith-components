@@ -1,4 +1,4 @@
-import '@/assets/main.css'
+import "@/assets/main.css";
 
 export { default as HelloWorld } from "@/components/HelloWorld.vue";
 export { default as TheWelcome } from "@/components/TheWelcome.vue";
