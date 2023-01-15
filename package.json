@@ -14,7 +14,7 @@
     "./dist/style.css": "./dist/style.css"
   },
   "types": "./dist/types/main.d.ts",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "This template should help get you started developing with Vue 3 in Vite.",
   "repository": {
     "type": "git",
