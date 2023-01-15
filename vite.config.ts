@@ -3,7 +3,7 @@ import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
-import path from "node:path";
+import { resolve } from "node:path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,10 +15,10 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/index.ts"),
-      name: "iotcore-vue-components",
+      entry: resolve(__dirname, "src/main.ts"),
+      name: "LilithComponents",
       formats: ["es"],
-      fileName: format => `iotcore-vue-components.${format}.js`,
+      fileName: (format) => `lilith-components.${format}.js`,
     },
     rollupOptions: {
       external: ["vue"],

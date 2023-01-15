@@ -1,29 +1,42 @@
 {
-  "name": "@cowlar/iotcore-vue-components",
-  "version": "0.0.1",
+  "name": "lilith-components",
   "type": "module",
   "files": [
     "src",
     "dist"
   ],
-  "main": "./dist/iotcore-vue-components.es.js",
-  "module": "./dist/iotcore-vue-components.es.js",
+  "main": "./dist/lilith-components.es.js",
+  "module": "./dist/lilith-components.es.js",
   "exports": {
     ".": {
-      "import": "./dist/iotcore-vue-components.es.js"
+      "import": "./dist/lilith-components.es.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/types/main.d.ts",
+  "version": "0.0.21",
+  "description": "This template should help get you started developing with Vue 3 in Vite.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sami-ullah-cowlar/lilith-components.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sami-ullah-cowlar/lilith-components/issues"
+  },
+  "homepage": "https://github.com/sami-ullah-cowlar/lilith-components#readme",
   "scripts": {
     "dev": "vite",
-    "build": "rm -rf ./dist && vue-tsc && vite build",
+    "build": "rm -rf dist && vue-tsc && vite build",
     "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "test:unit": "vitest --environment jsdom --root src/",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore && prettier --check .",
-    "lint:fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore && prettier --write ."
+    "test": "vitest --environment jsdom --root src/",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "npm:publish": "npm publish",
+    "npm:publish:utility": "git push && npm publish",
+    "npm:publish:patch": "npm version patch && npm run npm:publish:utility",
+    "npm:publish:minor": "npm version minor && npm run npm:publish:utility",
+    "npm:publish:major": "npm version major && npm run npm:publish:utility"
   },
   "peerDependencies": {
     "vue": "^3.2.45"
