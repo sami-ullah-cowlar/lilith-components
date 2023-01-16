@@ -1,5 +1,5 @@
 import { App } from 'vue'
-import * as components from './components'
+import * as components from './components/index'
 
 function install (app: App) {
     for (const key in components) {
@@ -12,4 +12,4 @@ import "./assets/main.css";
 
 export default { install }
 
-export * from './components'
+export * from './components/index'
