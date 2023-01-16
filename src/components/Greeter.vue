@@ -8,7 +8,7 @@ const props = defineProps<Props>()
 </script>
 
 <template>
-  <div>
+  <div class="greeter-component">
     Hello {{ msg }}! <span class="icon-heart" style="color:tomato"></span>
   </div>
 </template>
